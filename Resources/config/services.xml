@@ -31,5 +31,9 @@
             <argument type="service" id="lexik_currency.formatter" />
             <tag name="kernel.event_subscriber" />
         </service>
+        
+        <service id="lexik_currency.import.command" class="Lexik\Bundle\CurrencyBundle\Command\ImportCurrencyCommand" public="true">
+            <tag name="console.command" command="lexik:currency:import" />
+        </service>
     </services>
 </container>
